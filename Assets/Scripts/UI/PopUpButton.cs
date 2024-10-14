@@ -1,11 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Image = UnityEngine.UIElements.Image;
 
 public class PopUpButton : MonoBehaviour
 {
     [SerializeField] private GameObject popupUI;
     private bool isTimeStopped;
+    [SerializeField] private Image image;
+    
 
     public void ShowPopUpWindow()
     {
