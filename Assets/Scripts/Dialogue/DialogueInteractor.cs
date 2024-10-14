@@ -21,6 +21,10 @@ public class DialogueInteractor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        startDialogueButton.SetActive(false);
+        DialogueProvider provider = other.GetComponentInChildren<DialogueProvider>();
+        if (provider != null)
+        {
+            startDialogueButton.SetActive(false);
+        }
     }
 }
